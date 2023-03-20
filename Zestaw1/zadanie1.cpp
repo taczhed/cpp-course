@@ -19,6 +19,8 @@ int main()
 
     int borderSize = ((outerSize - innerSize) / 2);
 
+    cout << "" << endl;
+
     for (int y = 0; y < outerSize; y++) {
         if ((y >= 0 && y < borderSize) || (y >= innerSize + borderSize && y < outerSize)) {
             cout << setfill('*') << setw(outerSize) << "" << endl;
