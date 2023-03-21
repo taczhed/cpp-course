@@ -2,6 +2,9 @@
 #include <format>
 using namespace std;
 
+// https://godbolt.org/
+// x86-64 gcc (trunk) -std=c++2b
+
 int main()
 {
     int outerSize, innerSize;

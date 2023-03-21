@@ -6,7 +6,7 @@ int main() {
     unsigned long long k = 40;
     int a = 0, b = 1, n = 0;
 
-    for (unsigned long long i = 0; i <= k; i++) {
+    for (unsigned long long i = 0; i < k; i++) {
 
         if (i == 0) {
             cout << 0 << endl; 

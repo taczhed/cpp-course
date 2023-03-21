@@ -16,8 +16,8 @@ int fib(int n) {
 }
 
 int main() {
-    unsigned long long k = 40;
-    for (unsigned long long i = 0; i <= k; i++) {
+    unsigned long long k = 3;
+    for (unsigned long long i = 0; i < k; i++) {
         cout << fib(i) << endl;
     }
 }
