@@ -6,7 +6,11 @@ using namespace std;
 template<typename T>
 
 auto fun(const initializer_list<T>& arg) {
-    return accumulate(arg.begin(), arg.end(), T{});
+    T sum = 0;
+    for (auto i = arg.begin(); i != arg.end(); ++i) {
+        sum += *i;
+    }
+    return sum;
 }
 
 int main() {
