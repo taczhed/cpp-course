@@ -47,6 +47,10 @@
         "streambuf": "cpp",
         "typeinfo": "cpp",
         "regex": "cpp",
-        "cstring": "cpp"
+        "cstring": "cpp",
+        "filesystem": "cpp",
+        "chrono": "cpp",
+        "codecvt": "cpp",
+        "ratio": "cpp"
     }
 }
