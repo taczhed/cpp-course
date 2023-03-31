@@ -55,7 +55,7 @@ int main() {
     vector<int> shuffledNumbers = numbersGenerator();
     vector<int> sortedNumbers = quicksort(shuffledNumbers);
 
-    cout << "Nieposortowane liczby:\n";
+    cout << "Liczby przed posortowaniem:\n";
     
     for (int i = 0; i < 10000; ++i) {
         cout << shuffledNumbers[i] << " ";

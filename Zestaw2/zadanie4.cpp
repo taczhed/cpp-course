@@ -3,7 +3,7 @@
 
 using namespace std;
 
-// /home/taczhed/Systemy/Zadanie1/src
+// /home/taczhed/projects/frontend-next/src
 
 int main() {
     string path;
@@ -32,7 +32,7 @@ int main() {
     }   
 
     if (isEmpty) {
-        cout << "W podanym katalogu nie ma zwyklych plikow" << endl;
+        cout << "Brak plików w katalogu" << endl;
     }
 
     return 0;

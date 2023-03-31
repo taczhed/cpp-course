@@ -25,14 +25,14 @@ int main(int argc, char* argv[]) {
     int input;
     
     if (argc != 2) {
-        cout << "Błąd! Podaj liczbę w zapisie arabskim, jako argument!\n";
+        cout << "Błąd! Podaj liczbę w zapisie arabskim!\n";
         return 1;
     }
     
     input = stoi(argv[1]);
     
     if (input < 0 || input > 3999) {
-        cout << "Liczba poza przedziałem\n";
+        cout << "Błąd! Podaj liczbę w zakresie 0-3999! \n";
         return 1;
     }
     
