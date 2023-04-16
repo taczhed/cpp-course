@@ -9,6 +9,7 @@
 				"-Wall",
 				"-fdiagnostics-color=always",
 				"-g",
+				"-D DEBUG",
 				"${file}",
 				"-o",
 				"${fileDirname}/${fileBasenameNoExtension}",
