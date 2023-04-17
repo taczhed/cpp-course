@@ -2,12 +2,14 @@
 #include <algorithm>
 #include <iostream>
 
+using namespace std;
+
 class BigInt {
 
-std::string number;
+string number;
 
 public:
-    BigInt(const std::string& initialValue) : number(initialValue) {}
+    BigInt(const string& initialValue) : number(initialValue) {}
 
     BigInt& operator=(const BigInt& other) {
         number = other.number;
@@ -15,7 +17,7 @@ public:
     }
 
     BigInt add(const BigInt& other) const {
-        std::string result;
+        string result;
         int carry = 0;
         int i = number.size() - 1;
         int j = other.number.size() - 1;
@@ -33,7 +35,7 @@ public:
             result.push_back(digit_sum % 10 + '0');
         }
 
-        std::reverse(result.begin(), result.end());
+        reverse(result.begin(), result.end());
 
         while (result[0] == '0') {
             result.erase(0, 1);
@@ -43,7 +45,7 @@ public:
     }
 
     BigInt subtract(const BigInt& other) const {
-        std::string result;
+        string result;
         int borrow = 0;
         int i = number.size() - 1;
         int j = other.number.size() - 1;
@@ -66,7 +68,7 @@ public:
             result.push_back(digit_diff + '0');
         }
 
-        std::reverse(result.begin(), result.end());
+        reverse(result.begin(), result.end());
 
         while (result[0] == '0') {
             result.erase(0, 1);
@@ -76,7 +78,7 @@ public:
     }
 
     void print() const {
-        std::cout << number << std::endl;
+        cout << number << endl;
     }
 };
 

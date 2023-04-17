@@ -1,34 +1,36 @@
 #include <iostream>
 #include <string>
 
+using namespace std;
+
 class StringClass {
-    std::string str;
+    string str;
 public:
     // konstruktory
     StringClass() : str("") {
         #ifdef DEBUG
-            std::cout << "Tworzenie obiektu StringClass bez argumentu" << std::endl;
+            cout << "Tworzenie obiektu StringClass bez argumentu" << endl;
         #endif
     }
     
-    StringClass(const std::string& s) : str(s) {
+    StringClass(const string& s) : str(s) {
 
         #ifdef DEBUG
-        std::cout << "Tworzenie obiektu StringClass z napisem: " << str << std::endl;
+        cout << "Tworzenie obiektu StringClass z napisem: " << str << endl;
         #endif
     }
     
     StringClass(const StringClass& other) : str(other.str) {
 
         #ifdef DEBUG
-        std::cout << "Kopiowanie obiektu StringClass z napisem: " << str << std::endl;
+        cout << "Kopiowanie obiektu StringClass z napisem: " << str << endl;
         #endif
     }
     
-    StringClass(StringClass&& other) noexcept : str(std::move(other.str)) {
+    StringClass(StringClass&& other) noexcept : str(move(other.str)) {
 
         #ifdef DEBUG
-        std::cout << "Przenoszenie obiektu StringClass z napisem: " << str << std::endl;
+        cout << "Przenoszenie obiektu StringClass z napisem: " << str << endl;
         #endif
     }
     
@@ -36,7 +38,7 @@ public:
     ~StringClass() {
 
         #ifdef DEBUG    
-        std::cout << "Usuwanie obiektu StringClass z napisem: " << str << std::endl;
+        cout << "Usuwanie obiektu StringClass z napisem: " << str << endl;
         #endif
     }
     
@@ -45,7 +47,7 @@ public:
         if (this != &other) {
             str = other.str;
             #ifdef DEBUG
-            std::cout << "Operator kopiujący obiektu StringClass z napisem: " << str << std::endl;
+            cout << "Operator kopiujący obiektu StringClass z napisem: " << str << endl;
             #endif
         }
         return *this;
@@ -53,9 +55,9 @@ public:
     
     StringClass& operator=(StringClass&& other) noexcept {
         if (this != &other) {
-            str = std::move(other.str);
+            str = move(other.str);
             #ifdef DEBUG
-            std::cout << "Operator przeniesienia obiektu StringClass" << str << std::endl;
+            cout << "Operator przeniesienia obiektu StringClass" << str << endl;
             #endif
         }
         return *this;
@@ -66,9 +68,9 @@ int main() {
     StringClass str1;  // domyślny konstruktor
     StringClass str2("Hello, world!");  // konstruktor z argumentem
     StringClass str3(str2);  // konstruktor kopiujący
-    StringClass str4(std::move(str3));  // konstruktor przenoszący
+    StringClass str4(move(str3));  // konstruktor przenoszący
     str4 = str2;  // operator przypisania kopiujący
-    str2 = std::move(str3);  // operator przypisania przenoszący
+    str2 = move(str3);  // operator przypisania przenoszący
     
     return 0;
 }
