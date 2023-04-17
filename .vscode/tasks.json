@@ -10,6 +10,8 @@
 				"-fdiagnostics-color=always",
 				"-g",
 				"-D DEBUG",
+				"-lssl",
+				"-lcrypto",
 				"${file}",
 				"-o",
 				"${fileDirname}/${fileBasenameNoExtension}",
