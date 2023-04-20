@@ -83,8 +83,8 @@ public:
 };
 
 int main() {
-    BigInt number1("1000");
-    BigInt number2("1906");
+    BigInt number1("1000000000");
+    BigInt number2("1906000000");
 
     BigInt sum = number1.add(number2);
     sum.print();
